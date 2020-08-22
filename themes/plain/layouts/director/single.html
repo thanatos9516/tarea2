@@ -1,0 +1,22 @@
+{{ define "main" }}
+<h5>{{ .Title }}</h5>
+
+<h6>Actor details</h6>
+<table>
+<tr><td><b>ID</b><td><td>{{ .Params.directorId}}</td></tr>
+<tr><td><b>Nationality</b><td><td>{{ .Params.nationality}}</td></tr>
+<tr><td><b>Birth</b><td><td>{{ .Params.birth}}</td></tr>
+</table>
+
+<h6>Books</H6>
+    <ul>
+      {{ range .Params.peliculaId }}
+         {{ $t := $.Site.GetPage .}}
+         <li><a href="/pelicula/{{ .}}">{{ $t.Title }}</a></li>
+      {{ end }}
+    </ul>
+
+<h6>Biography</h6>
+
+{{ .Content }}
+{{ end }}
