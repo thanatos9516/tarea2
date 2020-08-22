@@ -1,0 +1,4 @@
+baseURL = "https://jovial-liskov-712120.netlify.app"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "plain"
